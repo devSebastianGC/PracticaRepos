@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+</head>
+<body onload="activar()">
+    <form action="">
+        <label for="nombre">Ingrese su nombre:</label>
+        <input type="text" name="nombre" id="nombre" onblur="validar(this)" onfocus="borrar(this)"><br>
+        <label for="pass">Ingrese su contraseña:</label>
+        <input type="text" name="pass" id="pass" onblur="validar(this)" onfocus="borrar(this)"><br>
+        <!--<select name="persona" id="persona" onchange="llamada()">
+            <option value="nom">nombre</option>
+            <option value="contra">contraseña</option>
+        </select>-->
+        <input type="radio" name="persona" id="nom">Nombre<br>
+        <input type="radio" name="persona" id="contra">Contraseña<br>
+        <input type="button" value="Enviar" onclick="llamada()">
+    </form>
+    <section>
+        <p id="parrafo" onmouseout="limpiar(this)"></p>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

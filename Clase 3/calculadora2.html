@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <form action="">
+        <label for="num1">Valor 1:</label>
+        <input type="number" name="num1" id="num1"><br/>
+        <label for="num2">Valor 2: </label>
+        <input type="number" name="num2" id="num2"><br/>
+        <!--<select name="operaciones" id="operaciones">
+            <option value="+">Suma</option>
+            <option value="-">Resta</option>
+            <option value="*">Multiplicacion</option>
+            <option value="/">Division</option>
+        </select><br><br>-->
+        <input type="radio" name="operaciones" id="+">Suma<br>
+        <input type="radio" name="operaciones" id="-">Resta<br>
+        <input type="radio" name="operaciones" id="*">Multiplicacion<br>
+        <input type="radio" name="operaciones" id="/">Division<br><br>
+        <input type="button" value="Resultado" onclick="operar()" />
+    </form>
+    <section>
+        <p id="respuesta"></p>
+    </section>
+    <script>
+        function operar(){
+            var n1= parseInt(document.getElementById("num1").value);
+            var n2= parseInt(document.getElementById("num2").value);
+            if(document.getElementById("+").checked === true){
+                var resultado = n1 + n2;
+                document.getElementById("respuesta").innerHTML=(`La suma de ${n1} + ${n2} = ${resultado}`);
+                oper = "";
+            }else if(document.getElementById("-").checked === true){
+                var resultado = n1 - n2;
+                document.getElementById("respuesta").innerHTML=(`La resta de ${n1} - ${n2} = ${resultado}`);
+                oper = "";
+            }else if(document.getElementById("*").checked === true){
+                var resultado = n1 * n2;
+                document.getElementById("respuesta").innerHTML=(`La multiplicacion de ${n1} X ${n2} = ${resultado}`);
+                oper = "";
+            }else if(document.getElementById("/").checked === true){
+                var resultado = n1 / n2;
+                if(n2 === 0){
+                    document.getElementById("respuesta").innerHTML=(`¡El segundo valor no puede ser 0!`);
+                }else{
+                    document.getElementById("respuesta").innerHTML=(`La division de ${n1} / ${n2} = ${resultado}`);
+                }
+                oper = "";
+            }
+
+            /*var oper = document.getElementById("operaciones").value;
+            var n1= parseInt(document.getElementById("num1").value);
+            var n2= parseInt(document.getElementById("num2").value);
+            console.log(`${oper}`)
+            if(oper === "+"){
+                var resultado = n1 + n2;
+                document.getElementById("respuesta").innerHTML=(`La suma de ${n1} + ${n2} = ${resultado}`);
+                oper = "";
+            }else if(oper === "-"){
+                var resultado = n1 - n2;
+                document.getElementById("respuesta").innerHTML=(`La resta de ${n1} - ${n2} = ${resultado}`);
+                oper = "";
+            }else if(oper === "*"){
+                var resultado = n1 * n2;
+                document.getElementById("respuesta").innerHTML=(`La multiplicacion de ${n1} X ${n2} = ${resultado}`);
+                oper = "";
+            }else if(oper === "/"){
+                var resultado = n1 / n2;
+                if(n2 === 0){
+                    document.getElementById("respuesta").innerHTML=(`¡El segundo valor no puede ser 0!`);
+                }else{
+                    document.getElementById("respuesta").innerHTML=(`La division de ${n1} / ${n2} = ${resultado}`);
+                }
+                oper = "";
+            }*/
+        }
+    </script>
+</body>
+</html>

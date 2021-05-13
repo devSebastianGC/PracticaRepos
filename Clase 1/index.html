@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo"></h1>
+        <p></p>
+    </header>
+    <main>
+        <p></p>
+        <p></p>
+        <p></p>
+        <script>
+            // inicio del script: muestra variables
+            /*otra cosa
+            otra cosa comentanda
+            otra cosa comentanda tambien
+            */
+           /*tipos de datos:
+           undefined
+           null
+           boolean: false, true
+           string: textos "12"
+           symbol: 
+           bigint: (int long java)
+           number: 
+           object:
+           */
+          var Myvariable;
+          Myvariable = 12;
+          Myvariable = 15;
+          let MyVar=12;
+          const MyConst= 12;
+
+          // operadores matematicos
+          /*
+             + ,- ,*, /,%
+             Math.[pow, round, ]
+          */
+
+            var num1 = 12.4;
+			var num2 = 8.3;
+			var result = num1/num2;
+            // var Myvar++ , Myvar+=1
+            // var Myvar-- , Myvar-=1
+
+			// solo para pruebas
+			document.write(`<h2>el resultado es: ${result}</h2>`);
+			console.log(result)
+			//document.write("<h2> el resultado es",result,"</h2>")
+
+
+            //Strings -> array
+            var Texto = "este es un texto"
+
+            var texto1 = "Hola_amigo";
+			let texto2 = "JavaScript es para ti";
+			var result = `${texto1} pepito ${texto2}`;
+			//var result = texto1 +" pepito "+texto2;
+			// solo para pruebas
+			document.write(`<h2>el resultado es: ${result}</h2>`);
+			document.write(`èl texto tiene ${result.length} caracteres`)
+			document.write(` <br/> el teto inicia por ${result[0]} y la quinta letra es ${result[4]}`)
+
+
+            // control de flujo
+
+            if (){}
+            else if(){}
+            else[]
+
+            // comparadores logicos
+            // tipo and
+            var num1 = 13;
+			var num2 = 7;
+			var num3 = 18;
+			if (num1 > num2 && num1 > num3){
+				document.write(`<p> el mayor es num1</p>`)
+			}else if(num2 > num3){
+			document.write(`<p>el mayor es num2</p>`)
+			}else{
+			document.write(`<p>el mayor es num3</p>`)
+			}
+			// tipo or
+            var dia = prompt("ingrese el dia del año");
+			var mes = prompt("ingrese el mes del año","")
+			if (mes=="12" || mes=="diciembre" || mes =="DICIEMBRE" || mes=="Diciembre"){
+				document.write(`<p>usted esta en navidad</p>`)
+			}else{
+				document.write(`<p>usted esta halloween</p>`)
+			}	
+
+            /// negacion
+            var Myvar=false;
+			if (!Myvar){
+				document.write(`el valor de Myvar es ${!Myvar}`)
+			}
+
+            // switch
+
+            var mes= prompt("escriba un mes en numero (1-12)");
+			mes = parseInt(mes)
+		
+			switch(mes){
+				case 1:
+					document.write(`el mes ${mes} es Enero`);
+					break;
+				case 2:
+					document.write(`el mes ${mes} es Febrero`);
+					break;
+				case 3:
+					document.write(`el mes ${mes} es Marzo`);
+					break;
+				case 4:
+					document.write(`el mes ${mes} es Abril`);
+					break;
+				case 5:
+					document.write(`el mes ${mes} es Mayo`);
+					break;
+			}
+
+
+
+        </script>
+
+    </main>
+    <footer>
+        <h3 id="actualizacion"></h3>
+        <p></p>
+    </footer>
+</body>
+</html>
