@@ -1,0 +1,10 @@
+1- git init
+2- git config user.name "NOMBRE"
+3- git config user.email "CORREO@SERVIDOR"
+4- ayuda: git help COMANDO / git config 
+5- git add ARCHIVO / git add -A /git add --ALL / git add .
+6- git commit -am "MENSAJE"
+7- git remote -V (ver conexion)
+8- git remote add origin SERVIDOR
+9- git branch -m RAMA: cambiar el nombre de la rama
+10- git push -u origin RAMA
